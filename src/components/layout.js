@@ -8,7 +8,7 @@ const MenuList = styled.ul`
 list-style-type: none;
 grid-column-start: 2;
 grid-row-start: 3;
-justify-items: start;
+grid-row-end: 3;
 display: grid;
 padding-left: 0;
 `
@@ -18,6 +18,7 @@ margin-top: 0.75em;
 margin-bottom: 0.75em;
 justify-self: left;
 grid-column-start: 1;
+
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
@@ -30,7 +31,7 @@ font-size: 20px;
 const MainContainer = styled.div`
 display: grid;
 grid-template-columns: 140px 136px auto auto auto auto auto auto auto auto auto auto 136px 140px;
-grid-template-rows: 100px 100px auto 50px;
+grid-template-rows: 100px 100px 100px 730px 50px;
 `
 
 const MainTitle = styled.p`
@@ -43,30 +44,60 @@ grid-row-start: 2;
 
 `
 
+const FooterContainer = styled.div`
+grid-column-start: 2;
+grid-column-end: 14;
+grid-row-start: 5;
+
+`
+
+const ChildrenContainer = styled.div`
+grid-column-start: 2;
+grid-column-end: 14;
+
+`
+
+const FooterText = styled.p`
+text-align: left;
+font-family: brandon-grotesque;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+font-size: 20px;
+`
+
+
 export default function Layout({ children }) {
   return (
-    <MainContainer>
-      <MainTitle>Evgenia Bobkova</MainTitle>
-      <MenuList>
-        <MenuItem><StyledLink to="/" activeStyle={{
-          color: "#C11932"
-        }}>Home</StyledLink></MenuItem>
-        <MenuItem><StyledLink to="/watercolours/" activeStyle={{
-          color: "#C11932"
-        }}>Watecolours</StyledLink></MenuItem>
-        <MenuItem><StyledLink to="/graphics/" activeStyle={{
-          color: "#C11932"
-        }}>Graphics</StyledLink></MenuItem>
-        <MenuItem><StyledLink to="/store/" activeStyle={{
-          color: "#C11932"
-        }}>Store</StyledLink></MenuItem>
-        <MenuItem><StyledLink to="/contact/" activeStyle={{
-          color: "#C11932"
-        }}>Contact me</StyledLink></MenuItem>
-      </MenuList>
+    <div>
+      <MainContainer>
+        <MainTitle>Evgenia Bobkova</MainTitle>
+        <MenuList>
+          <MenuItem><StyledLink to="/" activeStyle={{
+            color: "#C11932"
+          }}>Home</StyledLink></MenuItem>
+          <MenuItem><StyledLink to="/watercolours/" activeStyle={{
+            color: "#C11932"
+          }}>Watecolours</StyledLink></MenuItem>
+          <MenuItem><StyledLink to="/graphics/" activeStyle={{
+            color: "#C11932"
+          }}>Graphics</StyledLink></MenuItem>
+          <MenuItem><StyledLink to="/store/" activeStyle={{
+            color: "#C11932"
+          }}>Store</StyledLink></MenuItem>
+          <MenuItem><StyledLink to="/contact/" activeStyle={{
+            color: "#C11932"
+          }}>Contact me</StyledLink></MenuItem>
+        </MenuList>
+        <ChildrenContainer><p>Hey i'm children</p></ChildrenContainer>
+        <FooterContainer>
+          <hr></hr>
+          <FooterText>© 2020 by Evgeniya Bobkova. Proudly created with Olga Tselyuk</FooterText>
+        </FooterContainer>
+      </MainContainer>
 
 
-    </MainContainer>
+    </div>
   )
 }
 
