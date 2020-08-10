@@ -8,3 +8,5 @@
   font-family: "Times New Roman";
   src: url("../../static/fonts/times-new-roman.ttf");
 }
+
+html,body{margin:0;padding:0}

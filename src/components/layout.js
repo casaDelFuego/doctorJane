@@ -48,13 +48,14 @@ const FooterContainer = styled.div`
 grid-column-start: 2;
 grid-column-end: 14;
 grid-row-start: 5;
-
+margin: 0;
 `
 
 const ChildrenContainer = styled.div`
 grid-column-start: 2;
 grid-column-end: 14;
-
+grid-row-start: 1;
+grid-row-end: 5;
 `
 
 const FooterText = styled.p`
@@ -64,6 +65,7 @@ letter-spacing: 0px;
 color: #000000;
 opacity: 1;
 font-size: 20px;
+margin: 10px;
 `
 
 
@@ -89,7 +91,7 @@ export default function Layout({ children }) {
             color: "#C11932"
           }}>Contact me</StyledLink></MenuItem>
         </MenuList>
-        <ChildrenContainer><p>Hey i'm children</p></ChildrenContainer>
+        <ChildrenContainer>{children}</ChildrenContainer>
         <FooterContainer>
           <hr></hr>
           <FooterText>© 2020 by Evgeniya Bobkova. Proudly created with Olga Tselyuk</FooterText>
