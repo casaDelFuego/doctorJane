@@ -18,7 +18,6 @@ margin-top: 0.75em;
 margin-bottom: 0.75em;
 justify-self: left;
 grid-column-start: 1;
-
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
