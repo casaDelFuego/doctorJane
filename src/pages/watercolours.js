@@ -5,7 +5,7 @@ import styled from "styled-components"
 const Container = styled.div`
 display: grid;
 grid-template-columns: 140px 136px auto auto auto auto auto auto auto auto auto auto 136px 140px;
-grid-template-rows: 100px 100px 100px 750px 50px;
+grid-template-rows: 100px 100px 100px 730px 50px;
 ustify-content: stretch;
 
 `

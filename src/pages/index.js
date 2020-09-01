@@ -16,16 +16,13 @@ grid-column-start: 2;
 grid-column-end: 14;
 grid-row-start: 1;
 grid-row-end: 6;
+height: 730px;
+width: auto;
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 margin: 0;
 
-`
-const HomeImage = styled.img`
-object-fit: fill;
-z-index: -1;
-width: 100%;
 `
 
 
